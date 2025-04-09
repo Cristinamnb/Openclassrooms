@@ -1,4 +1,4 @@
-/****** General ***********/
+/************* General *************/
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -59,7 +59,7 @@ a {
 }
 
 
-/****** Header ***********/
+/************* Header *************/
 .header-navigation {
     display: flex;
     justify-content: space-between;
@@ -93,7 +93,7 @@ nav a:hover {
 }
 
 
-/********* Barre de recherche *********/
+/************* Barre de recherche *************/
 .barre-de-recherche {
     margin-top: 30px;
 }
@@ -146,7 +146,7 @@ nav a:hover {
 }
 
 
-/********** Icon section filtre *************/
+/************* Icon section filtre *************/
 .filters-section{
     display: flex;
     margin: 35px 0 0 0px;
@@ -182,6 +182,32 @@ nav a:hover {
     transform: rotate(15deg);
 }
 
+/************* Section info *************/
+.sdection-info {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.searchplus {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    gap: 10px;
+}
+.searchplus .fa-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065FC;
+    border: 1px solid #d9d9d9;
+    width: 24px;
+    height: 24px;
+    font-size: 81%;
+    border-radius: 50%;
+}
+.searchplus p {
+    font-size: 106%;
+    color: rgb(59, 59, 59);
+}
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
