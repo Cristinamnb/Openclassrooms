@@ -60,7 +60,6 @@ a {
 
 
 /****** Header ***********/
-
 .header-navigation {
     display: flex;
     justify-content: space-between;
@@ -144,6 +143,43 @@ nav a:hover {
     font-weight: 600;
     background-color: #0065FC;
     cursor: pointer;
+}
+
+
+/********** Icon section filtre *************/
+.filters-section{
+    display: flex;
+    margin: 35px 0 0 0px;
+    align-items: center;
+    gap: 15px;
+}
+.filters-section p {
+    font-weight: bold;
+}
+.filters-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.filters-types {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border: 2px solid #d9d9d9;
+    border-radius: 40px;
+    padding: 4px 19px;
+    transition: 0.3s;
+    gap: 10px;
+    box-sizing: border-box;
+}
+.filters-types:hover {
+    background-color: #DEEBFF;
+    border: 2px solid #DEEBFF;
+    cursor: pointer;
+}
+.filters-types:hover .filters-icons {
+    transform: rotate(15deg);
 }
 
 
