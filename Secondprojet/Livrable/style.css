@@ -182,8 +182,9 @@ nav a:hover {
     transform: rotate(15deg);
 }
 
+
 /************* Section info *************/
-.sdection-info {
+.section-info {
     margin-top: 35px;
     margin-bottom: 35px;
 }
@@ -208,6 +209,7 @@ nav a:hover {
     font-size: 106%;
     color: rgb(59, 59, 59);
 }
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
