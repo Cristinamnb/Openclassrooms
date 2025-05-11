@@ -1,0 +1,45 @@
+/* Reset CSS de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Supprime les styles par défaut des titres et paragraphes */
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Supprime la décoration des liens */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Liste sans puces ni marges */
+  ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Boutons sans style par défaut */
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Table sans espacements */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
