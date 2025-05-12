@@ -1,51 +1,51 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html>                                                                                                       <!-- Déclare le type de document, ici un document HTML5 -->
+<html lang="fr">                                                                                                      <!-- Début du document HTML, avec la langue définie sur le français -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booki</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+<head>                                                                                                                <!-- Début de l'en-tête du document, contenant les métadonnées et les liens vers les ressources externes -->
+    <meta charset="UTF-8">                                                                                            <!-- Définit l'encodage des caractères en UTF-8, pour supporter les caractères spéciaux -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                                            <!-- Permet un affichage responsive sur tous les appareils, notamment mobiles -->
+    <title>Booki</title>                                                                                              <!-- Titre de la page, affiché dans l’onglet du navigateur -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">                                                       <!-- Préconnecte au domaine Google Fonts pour accélérer le chargement des polices -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>                                              <!-- Idem, préconnecte à un autre domaine utilisé par Google Fonts, avec l’attribut crossorigin -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">     <!-- Importation de la police 'Raleway' avec différentes graisses (400, 500, 700) depuis Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"                     
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+        crossorigin="anonymous" referrerpolicy="no-referrer" />                                                       <!-- Lien vers la bibliothèque d’icônes Font Awesome -->
+    <link rel="stylesheet" href="style.css">                                                                          <!-- Lien vers la feuille de style CSS locale, pour la mise en forme personnalisée du site -->
+</head>                                                                                                               <!-- Fin de la section <head> -->
 
-<body>
+<body>                                                                                                                <!-- Début du corps du document, où s'affichera le contenu visible de la page -->
     <!-- Navigation - logo et lien --> 
-    <div class="main-container">
-        <header class="global-nav">
-            <img src="images/logo/Booki.png" alt="logo de booki">
-                <nav> 
-                    <a href="#">Hébergements</a>
-                    <a href="#">Activités</a>
-                </nav>
-        </header>
-        <main>
+    <div class="main-container">                                                                                      <!-- Conteneur principal de la page, utilisé pour centrer ou limiter la largeur du contenu -->
+        <header class="global-nav">                                                                                   <!-- En-tête de la page, contenant le logo et la navigation principale -->
+            <img src="images/logo/Booki.png" alt="logo de booki">                                                     <!-- Logo de Booki, affiché avec une image stockée dans le dossier 'images/logo'. Le texte alternatif s'affiche si l'image ne charge pas -->
+                <nav>                                                                                                 <!-- Menu de navigation -->
+                    <a href="#menuhebergements">Hébergements</a>                                                      <!-- Lien de navigation vers la section Hébergements (le # est une ancre) -->
+                    <a href="#menuactivites">Activités</a>                                                            <!-- Lien de navigation vers la section Activités (le # est une ancre) -->                                                                     
+                </nav>                                                                                                <!-- Fin du menu de navigation -->
+        </header>                                                                                                     <!-- Fin de l'en-tête -->
+        <main>                                                                                                        <!-- Balise principale du contenu central de la page, unique par page et utilisée pour le SEO -->                                            
             <!-- Barre de recherche -->
-            <section class="search-bar">
-                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                <p>En plein centre-ville ou en pleine nature</p>
-                <div class="map">
-                    <i class="fa-sharp fa-solid fa-location-dot"></i>
-                    <form method="post" action="traitement.php">
-                        <input class="city" type="search" placeholder="Marseille, France">
-                        <button id="search-desktop">Rechercher</button>
-                    </form>
-                    <i id="search-mobile" class="fas fa-search"></i>
-                </div>
-            </section>
+            <section class="search-bar">                                                                              <!-- Section dédiée à la barre de recherche, avec un titre, une description et un champ de recherche -->
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>                                          <!-- Titre principal de la page, utilisé pour le référencement et la hiérarchie du contenu -->
+                <p>En plein centre-ville ou en pleine nature</p>                                                      <!-- Slogan ou sous-titre pour introduire la recherche -->
+                <div class="map">                                                                                     <!-- Conteneur regroupant l’icône de localisation, le formulaire de recherche et l’icône mobile -->
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>                                                 <!-- Icône de localisation (Font Awesome) affichée à gauche du champ de recherche -->
+                    <form method="post" action="traitement.php">                                                      <!-- Formulaire qui envoie les données en POST vers le fichier traitement.php (à créer côté serveur) -->
+                        <input class="city" type="search" placeholder="Marseille, France">                            <!-- Champ de recherche pour saisir une ville, ici avec un exemple en placeholder -->
+                        <button id="search-desktop">Rechercher</button>                                               <!-- Bouton de recherche destiné à l'affichage sur ordinateur (desktop) -->
+                    </form>                                                                                           <!-- Fin du formulaire -->
+                    <i id="search-mobile" class="fas fa-search"></i>                                                  <!-- Icône de loupe (recherche) visible probablement en version mobile, pour remplacer le bouton texte -->
+                </div>                                                                                                <!-- Fin du conteneur map -->
+            </section>                                                                                                <!-- Fin de la section de recherche -->
             <!-- Section filtre -->
-            <section class="filters-section">
-                <h2>Filtres</h2>
-                <div class="filters-list">
-                    <div class="filters-types">
-                            <i class="fa-sharp fa-solid fa-money-bill-wave filters-icon"></i>
-                            <p>Économique</p>
-                    </div>
+            <section class="filters-section">                                                                         <!-- Section contenant les filtres de recherche, avec un titre et plusieurs types de filtres -->
+                <h2>Filtres</h2>                                                                                      <!-- Titre de niveau 2 pour introduire la zone des filtres -->
+                <div class="filters-list">                                                                            <!-- Conteneur qui regroupe tous les types de filtres sous forme de liste -->
+                    <div class="filters-types">                                                                       <!-- Élément de filtre individuel (ici : Économique) -->
+                            <i class="fa-sharp fa-solid fa-money-bill-wave filters-icon"></i>                         <!-- Icône représentant un billet, associée au filtre économique -->
+                            <p>Économique</p>                                                                         <!-- Nom du filtre affiché sous l'icône -->
+                    </div>                                                                                            <!-- Fin du filtre individuel -->
                     <div class="filters-types">
                             <i class="fa-solid fa-child filters-icon"></i>
                             <p>Famille</p>
@@ -58,41 +58,41 @@
                             <i class="fa-solid fa-fire filters-icon"></i>
                             <p>Nos pépites</p>
                     </div>
-                </div>
-            </section>
+                </div>                                                                                                <!-- Fin du conteneur des filtres -->
+            </section>                                                                                                <!-- Fin de la section des filtres -->
             <!-- Section info -->
-            <section class="info-section">
-                <div class="searchplus">
-                   <i class="fas fa-info fa-xs"></i>
-                   <p>Plus de 500 logements sont disponibles dans cette ville</p>
-               </div>
-           </section>
+            <section class="info-section">                                                                            <!-- Section dédiée à l'affichage d'une information complémentaire à la recherche -->
+                <div class="searchplus">                                                                              <!-- Conteneur du message d'information, regroupant une icône et un texte -->
+                   <i class="fas fa-info fa-xs"></i>                                                                  <!-- Icône Font Awesome en forme de cercle "i", utilisée pour signaler une information importante ou utile. La classe `fa-xs` réduit la taille de l’icône -->
+                   <p>Plus de 500 logements sont disponibles dans cette ville</p>                                     <!-- Message informatif destiné à rassurer ou informer l’utilisateur sur la disponibilité des hébergements -->
+               </div>                                                                                                 <!-- Fin du conteneur d’information -->
+           </section>                                                                                                 <!-- Fin de la section info -->
             <!-- Hebergements et populaires -->
-            <div class="hebergements-and-populaires">
+            <div class="hebergements-and-populaires">                                                                 <!-- Conteneur principal pour regrouper la section hébergements et la section populaires -->
                 <!-- Hebergements cartes -->
-                <section class="hebergements">
-                    <h2 class="section-title">Hébergements à Marseille</h2>
-                    <div class="hebergements-cards">
+                <section class="hebergements">                                                                        <!-- Section dédiée à l'affichage des cartes des hébergements -->
+                    <h2 class="section-title">Hébergements à Marseille</h2>                                           <!-- Titre principal de la section -->
+                    <div class="hebergements-cards">                                                                  <!-- Conteneur regroupant toutes les cartes d’hébergement -->
                         <!-- Hôtel 1 -->
-                        <a href="#" class="lien-card">
-                            <article>
-                                <img src="images/hebergements/fred-kleber.jpg" alt="Image de la chambre d'hôtel">
-                                <div class="card-content-hebergements">
-                                    <div class="card-txt">
-                                        <h3 class="card-title-hebergements">Hôtel du port</h3>
-                                        <p class="card-subtitle-hebergements">Nuit à partir de 52<span class="euro">€</span></p>
-                                    </div>
-                                    <div class="card-rating-hebergements">
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
-                                        <span class="sr-only">Note de 4 sur 5</span>
-                                    </div>
-                                </div>
-                            </article>
-                        </a>
+                        <a href="#" class="lien-card">                                                                <!-- Lien cliquable qui englobe toute la carte -->
+                            <article id="menuhebergements">                                                           <!-- Bloc de contenu pour l’hébergement ; identifié ici avec un ID -->
+                                <img src="images/hebergements/fred-kleber.jpg" alt="Image de la chambre d'hôtel">     <!-- Image de l'hôtel -->
+                                <div class="card-content-hebergements">                                               <!-- Conteneur pour le contenu textuel et la notation -->
+                                    <div class="card-txt">                                                            <!-- Bloc pour le titre et le sous-titre -->
+                                        <h3 class="card-title-hebergements">Hôtel du port</h3>                        <!-- Nom de l’hébergement -->
+                                        <p class="card-subtitle-hebergements">Nuit à partir de 52<span class="euro">€</span></p>  <!-- Prix avec symbole euro -->
+                                    </div>                                                                            <!-- Fin du conteneur de texte -->
+                                    <div class="card-rating-hebergements">                                            <!-- Bloc pour les étoiles de notation -->
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>                     <!-- Étoile 1 pleine -->
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>                     <!-- Étoile 2 pleine -->
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>                     <!-- Étoile 3 pleine -->
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>                     <!-- Étoile 4 pleine -->
+                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>        <!-- Étoile 5 grisée -->
+                                        <span class="sr-only">Note de 4 sur 5</span>                                  <!-- Texte accessible uniquement aux lecteurs d’écran -->
+                                    </div>                                                                            <!-- Fin de la notation -->
+                                </div>                                                                                <!-- Fin du contenu de carte -->
+                            </article>                                                                                <!-- Fin de la carte d’hébergement -->
+                        </a>                                                                                          <!-- Fin du lien de la carte -->
                         <!-- Hôtel 2 -->
                         <a href="#" class="lien-card">
                             <article>
@@ -193,35 +193,35 @@
                                 </div>
                             </article>
                         </a>
-                    </div>
+                    </div>                                                                                            <!-- Fin du conteneur des cartes d’hébergements -->
                     <!-- Titre afficher plus -->
-                    <h3 class="text-fin-hebergements">Afficher plus</h3>
-                </section>                
+                    <h3 class="text-fin-hebergements">Afficher plus</h3>                                              <!-- Lien ou texte permettant d'afficher plus de résultats -->
+                </section>                                                                                            <!-- Fin de la section des hébergements -->
                 <!-- Populaires cartes -->
-                <section class="populaires">
-                    <div class="populaires-title">
-                        <h2 class="section-title">Les plus populaires</h2>
-                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-                    </div>
-                    <div class="populaires-cards">
+                <section class="populaires">                                                                          <!-- Section contenant les hébergements les plus populaires -->
+                    <div class="populaires-title">                                                                    <!-- Conteneur du titre de la section avec icône -->
+                        <h2 class="section-title">Les plus populaires</h2>                                            <!-- Titre principal de la section -->
+                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>                                     <!-- Icône représentant les tendances ou la popularité -->
+                    </div>                                                                                            <!-- Fin du conteneur des cartes d’hébergements -->
+                    <div class="populaires-cards">                                                                    <!-- Conteneur regroupant toutes les cartes d'hébergements populaires -->
                         <!-- Hôtel 1 -->
-                            <article class="card">
-                                <img src="./images/hebergements/emile-guillemot.jpg" alt="Image de la chambre d'hôtel montrant un lit">
-                                <div class="card-content">
-                                    <div class="card-txt">
-                                        <h3 class="card-title">Hôtel Le soleil du matin</h3>
-                                        <p class="card-subtitle">Nuit à partir de 128<span class="euro">€</span></p>
-                                    </div>
-                                    <div class="card-rating">
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
-                                        <span class="sr-only">Note de 4 sur 5</span>
-                                    </div>
-                                </div>
-                            </article>
+                            <article class="card">                                                                    <!-- Carte individuelle pour un hébergement -->
+                                <img src="./images/hebergements/emile-guillemot.jpg" alt="Image de la chambre d'hôtel montrant un lit"> <!-- Image de l'hébergement -->
+                                <div class="card-content">                                                            <!-- Conteneur du contenu de la carte (texte + note) -->
+                                    <div class="card-txt">                                                            <!-- Conteneur des textes descriptifs -->
+                                        <h3 class="card-title">Hôtel Le soleil du matin</h3>                          <!-- Nom de l’hôtel -->
+                                        <p class="card-subtitle">Nuit à partir de 128<span class="euro">€</span></p>  <!-- Prix par nuit -->
+                                    </div>                                                                            <!-- Fin du conteneur des textes descriptifs -->
+                                    <div class="card-rating">                                                         <!-- Conteneur des étoiles de notation -->
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>                     <!-- Étoile 1 -->
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>                     <!-- Étoile 3 -->
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>                     <!-- Étoile 3 -->
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>                     <!-- Étoile 4 -->
+                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>        <!-- Étoile 5 grisée -->
+                                        <span class="sr-only">Note de 4 sur 5</span>                                  <!-- Texte masqué pour les lecteurs d’écran -->
+                                    </div>                                                                            <!-- Fin du conteneur des étoiles de notation -->
+                                </div>                                                                                <!-- Fin du conteneur du contenu de la carte (texte + note) -->
+                            </article>                                                                                <!-- Fin de la carte de l’hôtel 1 -->
                         <!-- Hôtel 2 -->
                             <article class="card">
                                 <img src="./images/hebergements/aw-creative.jpg" alt="Image de la chambre d'hôtel montrant un lit">
@@ -258,21 +258,21 @@
                                     </div>
                                   </div>
                             </article>
-                </section>      
-            </div>
+                </section>                                                                                            <!-- Fin de la section populaires --> 
+            </div>                                                                                                    <!-- Fin du conteneur global hebergements-and-populaires -->
             <!-- Activité à Marseille -->
-            <section class="activites-section">
-                <h2 class="section-title">Activités à Marseille</h2>
-                <div class="activites-list">
+            <section class="activites-section">                                                                       <!-- Section contenant les activités proposées à Marseille -->                                                           
+                <h2 class="section-title">Activités à Marseille</h2>                                                  <!-- Titre principal de la section -->
+                <div class="activites-list">                                                                          <!-- Conteneur principal des cartes d’activités -->
                         <!-- Activite 1 -->
-                        <div class="activites-card">
-                            <a href="#">
-                                <article>
-                                    <img src="images/activites/reno-laithienne.jpg" alt="Vieux-port">
-                                    <h3>Vieux-port</h3>
-                                </article>
-                            </a>
-                        </div>
+                        <div class="activites-card">                                                                  <!-- Carte d’activité individuelle -->
+                            <a href="#">                                                                              <!-- Lien cliquable autour de la carte -->
+                                <article id="menuactivites">                                                          <!-- Élément article contenant le contenu de l’activité -->
+                                    <img src="images/activites/reno-laithienne.jpg" alt="Vieux-port">                 <!-- Image représentant l’activité -->
+                                    <h3>Vieux-port</h3>                                                               <!-- Nom de l’activité -->
+                                </article>                                                                            <!-- Fin de l’article de l’activité -->
+                            </a>                                                                                      <!-- Fin du lien -->
+                        </div>                                                                                        <!-- Fin de la carte d’activité -->
                         <!-- Activite 2 -->
                         <div class="activites-card">
                             <a href="#">
@@ -300,19 +300,19 @@
                                 </article>
                             </a>
                         </div>
-                    </div>
-            </section>
-        </main>
+                    </div>                                                                                            <!-- Fin du conteneur de la liste d’activités -->
+            </section>                                                                                                <!-- Fin de la section "Activités à Marseille" -->
+        </main>                                                                                                       <!-- Fin du bloc principal de la page -->
         <!-- Footer -->
-        <footer class="global-footer">
-            <div class="footer-menu">
-                <h4 class="footer-title">À propos</h4>
-                <ul>
-                    <li><a href="#">Fonctionnement du site</a></li>
-                    <li><a href="#">Conditions générales </a></li>
-                    <li><a href="#">Données et confidentialité</a></li>
-                </ul>
-            </div>
+        <footer class="global-footer">                                                                                <!-- Pied de page principal du site -->
+            <div class="footer-menu">                                                                                 <!-- Première colonne du footer -->
+                <h4 class="footer-title">À propos</h4>                                                                <!-- Titre de la section -->
+                <ul>                                                                                                  <!-- Liste des liens d'information -->
+                    <li><a href="#">Fonctionnement du site</a></li>                                                   <!-- Lien vers une page explicative -->
+                    <li><a href="#">Conditions générales </a></li>                                                    <!-- Lien vers les CGU -->
+                    <li><a href="#">Données et confidentialité</a></li>                                               <!-- Lien vers la politique de confidentialité -->
+                </ul>                                                                                                 <!-- Fin de la liste -->
+            </div>                                                                                                    <!-- Fin de la première colonne -->
             <div class="footer-menu">
                 <h4 class="footer-title">Nos hébergements</h4>
                 <ul>
@@ -327,8 +327,8 @@
                     <li><a href="#">Nous contacter</a></li>
                 </ul>
             </div>
-        </footer>
-    </div>
-</body>
+        </footer>                                                                                                     <!-- Fin du pied de page -->
+    </div>                                                                                                            <!-- Fin d’un conteneur englobant main-container -->
+</body>                                                                                                               <!-- Fin du corps HTML principal -->
 
-</html>
+</html>                                                                                                               <!-- Fin du document HTML -->

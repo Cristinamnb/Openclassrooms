@@ -51,6 +51,9 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 /************* Navigation - logo et lien *************/
 .global-nav {
