@@ -372,6 +372,32 @@ nav a:hover {
     margin: 0px;
 }
 
+/************* Footer *************/
+.global-footer {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #F2F2F2;
+    padding: 21px;
+    margin-bottom: -11px;
+}
+.footer-menu {
+    width: 32%;
+}
+.title-footer {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.footer-menu ul {
+    padding-left: 0px;
+    margin: 0;
+}
+.footer-menu li {
+    margin-top: 15px;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
