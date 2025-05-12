@@ -1,78 +1,70 @@
 /************* General *************/
 * {
     font-family: 'Raleway', sans-serif;
+    list-style-type: none; /* a joute */
+    text-decoration: none;
+    margin: 0;
+    box-sizing: border-box; /* a joute */
 }
-
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
-
-.fa-solid {
-    color: var(--main-color);
+.fa-solid,
+i {
+    color: var(--main-color); /* a ajoute*/
 }
-
 body {
     display: flex;
     justify-content: center;
 }
-
 .main-container {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
 }
-
 a {
-    color: inherit;
+    color: inherit;   /* a voir si ca fonctionne (l'autre color: #000;)*/
     text-decoration: none;
 }
-
 .section-title {
     margin: 0;
     font-size: 22px;
 }
-
 .card {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
 .card img {
     object-fit: cover;
 }
-
 .card-title {
     font-size: 16px;
 }
-
 .euro {
     font-weight: 700;
 }
-
 .neutral-star {
     color: var(--main-bg-color)
 }
 
-
-/************* Header *************/
-.header-navigation {
+/************* Navigation - logo et lien *************/
+.global-nav {
     display: flex;
     justify-content: space-between;
     max-width: 1440px;
     height: 79px;
     margin-bottom: 30px;
 }
-.header-navigation img{
-    display: flex;
-    flex-direction: column;
+.global-nav img {
+    display: block;
     width: 61px;
     height: 19px;
-    padding: 30px 50px 30px 0;
+    align-self: center; /* ou center si tu veux centrer verticalement */
 }
 nav {
     display: flex;
@@ -92,23 +84,28 @@ nav a:hover {
     color: var(--main-color);
 }
 
-
 /************* Barre de recherche *************/
-.barre-de-recherche {
+.search-bar {
     margin-top: 30px;
 }
-.barre-de-recherche h1 {
+.search-bar h1 {
     margin-bottom: 8px;
 }
-.barre-de-recherche p {
+.search-bar p {
     margin-top: 8px;
     margin-bottom: 35px;
     color: rgb(78, 77, 77);
+    font-size: 16px;
 }
-.barre-de-recherche .map {
+.search-bar .map {
     display: flex;
+    align-items: center;
 }
-.barre-de-recherche .fa-solid {
+.search-bar .map form {
+    display: flex;
+    flex-direction: row;
+}
+.search-bar .fa-solid {
     background-color: #F2F2F2;
     color: #000;
     border-radius: 15px 0 0 15px;
@@ -119,7 +116,7 @@ nav a:hover {
     align-items: center;
     font-size: 112%;
 }
-.barre-de-recherche input {
+.search-bar input {
     position: relative;
     height: 49px;
     width: 236px;
@@ -127,11 +124,11 @@ nav a:hover {
     font-weight: bold;
     font-size: 119%;
 }
-.barre-de-recherche input::placeholder {
+.search-bar input::placeholder {
     color: black;
     padding:0px 20px 0px 20px;
 }
-.barre-de-recherche #search-desktop {
+.search-bar #search-desktop {
     border-radius: 0 15px 15px 0;
     border: none;
     height: 49px;
@@ -143,18 +140,26 @@ nav a:hover {
     font-weight: 600;
     background-color: #0065FC;
     cursor: pointer;
+    font-size: 17px;
+}
+.search-bar #search-mobile {
+    display: none;
 }
 
-
-/************* Icon section filtre *************/
+/************* Section filtre *************/
 .filters-section{
     display: flex;
     margin: 35px 0 0 0px;
     align-items: center;
     gap: 15px;
 }
+.filters-section h2 {
+    font-size: 18px;
+    margin-left: 6px;
+}
 .filters-section p {
     font-weight: bold;
+    font-size: 17px;
 }
 .filters-list {
     display: flex;
@@ -178,13 +183,12 @@ nav a:hover {
     border: 2px solid #DEEBFF;
     cursor: pointer;
 }
-.filters-types:hover .filters-icons {
+.filters-types:hover .filters-icon {
     transform: rotate(15deg);
 }
 
-
 /************* Section info *************/
-.section-info {
+.info-section {
     margin-top: 35px;
     margin-bottom: 35px;
 }
@@ -202,7 +206,7 @@ nav a:hover {
     border: 1px solid #d9d9d9;
     width: 24px;
     height: 24px;
-    font-size: 81%;
+    font-size: 0.75em;
     border-radius: 50%;
 }
 .searchplus p {
@@ -210,23 +214,71 @@ nav a:hover {
     color: rgb(59, 59, 59);
 }
 
-
-/****** Hebergements And Populaires ***********/
+/************* Hebergements et populaires *************/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
 }
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+.card-title {
+    font-size: 16px;
+}
+.euro {
+    font-weight: 700;
+}
+.neutral-star {
+    color: var(--main-bg-color);
+}
+.card-rating {
+    color: #0065FC;
+}
 
-.hebergements-and-populaires section {
+/************* Herbegements cartes *************/
+.hebergements {
+    width: 67%;
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
 }
-
-/****** Hebergements ***********/
-.hebergements {
-    width: 65%;
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.lien-card {
+    width: 30%;
+    min-width: 120px;
+    background-color: white;
+    padding: 5px;
+    margin-top: 33px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #DADADA;
+    transition: 0.3s;
+}
+.lien-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card-title-hebergements {
+    margin: 1px 0 8px 15px;
+}
+.card-subtitle-hebergements {
+    margin: 8px 0 8px 15px;
+}
+.text-fin-hebergements {
+    font-size: 18px;
+    margin-top: 33px;
+}
+.card-rating-hebergements {
+    color: #0065FC;
+    margin: 0 0 0 15px;
 }
 
 /****** Populaires ***********/
